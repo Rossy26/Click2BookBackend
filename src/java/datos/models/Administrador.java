@@ -4,12 +4,21 @@
  */
 package datos.models;
 
+import java.util.Date;
+
 /**
  *
  * @author Rossimar
  */
-public class Administrador {
+public class Administrador extends Persona {
     private int idAdministrador;
+
+    public Administrador(int idPersona, String nombre, String apellido, Date fechaNacimiento, String email, String contrasena, String tipo) {
+        super(idPersona, nombre, apellido, fechaNacimiento, email, contrasena, tipo);
+        idAdministrador = idPersona;
+    }
+    
+    
 
     /**
      * @return the idAdministrador
@@ -22,10 +31,6 @@ public class Administrador {
      * @param idAdministrador the idAdministrador to set
      */
     public void setIdAdministrador(int idAdministrador) {
-        this.idAdministrador = idAdministrador;
-    }
-
-    public Administrador(int idAdministrador) {
         this.idAdministrador = idAdministrador;
     }
 

@@ -12,6 +12,11 @@ import java.util.Date;
  */
 public class Estudiante extends Persona {
     private int idEstudiante;
+    
+    public Estudiante(int idPersona, String nombre, String apellido, Date fechaNacimiento, String email, String contrasena, String tipo) {
+        super(idPersona, nombre, apellido, fechaNacimiento, email, contrasena, tipo);
+        this.idEstudiante = idPersona;
+    }
 
     /**
      * @return the idEstudiante
@@ -24,11 +29,6 @@ public class Estudiante extends Persona {
      * @param idEstudiante the idEstudiante to set
      */
     public void setIdEstudiante(int idEstudiante) {
-        this.idEstudiante = idEstudiante;
-    }
-
-    public Estudiante(int idEstudiante, int idPersona, String nombre, String apellido, Date fechaNacimiento, String email, String contrasena, String tipo) {
-        super(idPersona, nombre, apellido, fechaNacimiento, email, contrasena, tipo);
         this.idEstudiante = idEstudiante;
     }
 
